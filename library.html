@@ -1,0 +1,295 @@
+<p><strong>Maximizing the content of the library</strong>. You may not find a funded proposal for the same program you are interested in. However, the content here&nbsp;may be useful.</p>
+<ol>
+<li>Analyze how arguments are made to particular funders. Also, look at how proposals for various mechanisms and funding levels differ.</li>
+<li>Is there information that you can draw from proposals of similar type (e.g. same discipline, activity, type of funder)?</li>
+<li>Look at several types of proposals and determine if you can adopt &ldquo;workable&rdquo; elements: organization, phrasing, graphics, use of formatting and style, etc.</li>
+<li>Some proposals include cover letters, collaborators&rsquo; letters, institutional commitment letters, and mentors&rsquo; letters. Use these for guidance.</li>
+<li><span>Given limited space,</span> consider how these PIs synthesized information. Compare that to sections that needed more detail. Notice where the focus and energy of the narrative is placed, and what is emphasized.</li>
+<li>Funders ask for specific aims, goals and objectives, hypotheses, etc. Analyze how these are formulated and developed.</li>
+<li>Is there anything that would not work for your discipline, narrative, or funder?</li>
+<li>Can any of these investigators serve as resources, mentors or collaborators?</li>
+</ol>
+<p><strong>Updates to the library</strong>. We are working to expand the numbers and types of proposals available as examples. The library is usually updated once per year. If there is a particular proposal you would like an example of, <span>please <a href="https://docs.google.com/forms/d/e/1FAIpQLSd0EUqgxL5MaNj2LKHznzyrB1De4LE3ZiaVPJCm4S5VaVoscw/viewform?usp=sf_link">submit a request</a>.</span>&nbsp;</p>
+<p>&nbsp;</p>
+
+<div class="toggle_list" id="panel6"><strong>Federal Resources</strong>
+<ul>
+<li><strong>Department of Education</strong>: <a href="https://www.ed.gov/about/ed-overview/required-notices/freedom-of-information-act-foia/foia-e-reading-room" target="_blank" rel="noopener">FOIA e-Reading Room</a> has numerous grant applications funded by the Office of the Chief Financial Officer, Office of Innovation and Improvement, Institute of Education Sciences, and others.</li>
+<li><strong>National Institutes of Health Grants</strong>
+<ul>
+<li>Guidance on <a href="https://grants.nih.gov/grants/forms.htm" target="_blank" rel="noopener">various NIH grant components</a><span>, from NIH</span></li>
+<li><span><a href="https://grants.nih.gov/grants-process/write-application/samples-applications-and-documents" target="_blank" rel="noopener">Sample applications, attachments, and other documents</a> from NIH</span></li>
+<li><span><a href="https://www.niaid.nih.gov/grants-contracts/sample-applications" target="_blank" rel="noopener">Sample applications and summary statements</a> from the National Institute of Allergy and Infectious Disease, NIH</span></li>
+</ul>
+</li>
+<li><strong>National Endowment for the Humanities</strong>: <a href="http://www.neh.gov/about/foia/freedom-information-act-sample-grant-application-narratives" target="_blank" rel="noopener">Sample grant application narratives</a></li>
+<li><strong>National Endowment for the Arts</strong>: <a href="https://www.arts.gov/about/foia/library" target="_blank" rel="noopener">Sample narratives of funded grants</a></li>
+<li><strong>Institute of Museum and Library Services</strong>: <a href="http://www.imls.gov/applicants/sample_applications.aspx" target="_blank" rel="noopener">Sample grant applications for various programs</a></li>
+</ul>
+</div>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VCU Funded Proposal Library</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --vcu-black: #000000;
+      --vcu-white: #FFFFFF;
+      --vcu-gold: #FFB300;
+      --vcu-light-gray: #F5F5F5;
+      --vcu-dark-gray: #333333;
+    }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: var(--vcu-white);
+      color: var(--vcu-black);
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .vcu-header {
+      background-color: var(--vcu-black);
+      color: var(--vcu-white);
+      padding: 25px 0;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .header-title {
+      margin: 0;
+      font-size: 2.2rem;
+      font-weight: 700;
+    }
+    .vcu-logo {
+      height: 50px;
+      width: auto;
+    }
+    .filters-panel {
+      background-color: var(--vcu-white);
+      border: 1px solid #e0e0e0;
+      padding: 25px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      border-top: 4px solid var(--vcu-gold);
+    }
+    .filters-title {
+      color: var(--vcu-black);
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--vcu-gold);
+      display: inline-block;
+    }
+    .filter-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .filter-group {
+      display: flex;
+      flex-direction: column;
+    }
+    .filter-group label {
+      font-weight: 600;
+      color: var(--vcu-black);
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+    .filter-group select {
+      padding: 10px 15px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      background-color: var(--vcu-white);
+      color: var(--vcu-black);
+      font-size: 0.95rem;
+    }
+    .table-panel {
+      background-color: var(--vcu-white);
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      margin-bottom: 30px;
+      border-top: 4px solid var(--vcu-gold);
+    }
+    #filtered-table {
+      width: 100% !important;
+    }
+    #filtered-table th {
+      background-color: var(--vcu-black);
+      color: var(--vcu-white);
+      padding: 12px 15px;
+      font-weight: 600;
+    }
+    #filtered-table td {
+      padding: 12px 15px;
+      border-bottom: 1px solid #eee;
+      vertical-align: top;
+    }
+    #filtered-table tr:nth-child(even) {
+      background-color: var(--vcu-light-gray);
+    }
+    .vcu-footer {
+      background-color: var(--vcu-black);
+      color: var(--vcu-white);
+      padding: 20px 0;
+      text-align: center;
+      font-size: 0.9rem;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div class="vcu-header">
+    <div class="container header-content">
+      <h1 class="header-title">VCU Funded Proposal Library</h1>
+      <div class="vcu-logo-placeholder" style="color: var(--vcu-gold); font-weight: bold; font-size: 1.5rem;">VCU</div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="filters-panel">
+      <h2 class="filters-title">Filter Projects</h2>
+      <div class="filter-grid">
+        <div class="filter-group">
+          <label for="filter-type">Project Type</label>
+          <select id="filter-type">
+            <option value="">All Types</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="filter-field">Research Field</label>
+          <select id="filter-field">
+            <option value="">All Fields</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="filter-division">Division</label>
+          <select id="filter-division">
+            <option value="">All Divisions</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="filter-sponsor">Sponsor</label>
+          <select id="filter-sponsor">
+            <option value="">All Sponsors</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="table-panel">
+      <table id="filtered-table" class="display">
+        <thead></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="vcu-footer">
+    <div class="container footer-content">
+      <div>Virginia Commonwealth University Research Projects</div>
+      <div class="footer-logo-placeholder" style="color: var(--vcu-gold); font-weight: bold;">VCU</div>
+    </div>
+  </div>
+
+  <script>
+    const csvUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSfzCIqMwAFLL_aerMGhx6no1vHr7F2IFI6gkLjrBRmZtQYGf4IB_MHkCEtrNDUUpI1L8uIMNaUfYa9/pub?gid=0&single=true&output=csv";
+    let dataTable;
+
+    function populateDropdown(selector, data, columnIndex, columnName) {
+      if (columnIndex === -1) return;
+      const values = data.map(row => row[columnIndex]?.toString().trim())
+        .filter(cell => cell && cell !== "" && !/^n\/a$/i.test(cell));
+      const unique = [...new Set(values)].sort();
+      const dropdown = $(selector);
+      unique.forEach(val => {
+        dropdown.append(`<option value="${val}">${val}</option>`);
+      });
+    }
+
+    Papa.parse(csvUrl, {
+      download: true,
+      header: false,
+      complete: function (results) {
+        try {
+          let rawData = results.data.filter(row => row.some(cell => cell && cell.toString().trim() !== ""));
+          const rawHeaders = rawData.shift().map(h => h.toString().trim());
+
+          const keyIdx = rawHeaders.indexOf("Key");
+          if (keyIdx > -1) rawHeaders.splice(keyIdx, 1);
+
+          const headers = rawHeaders;
+          const typeIdx = headers.indexOf("Type");
+          const fieldIdx = headers.indexOf("Field/Department");
+          const divisionIdx = headers.indexOf("IC/Division");
+          const sponsorIdx = headers.indexOf("Sponser");
+
+          $("#filtered-table thead").append("<tr>" + headers.map(h => `<th>${h}</th>`).join("") + "</tr>");
+
+          const tbody = $("#filtered-table tbody");
+          rawData.forEach(row => {
+            if (keyIdx > -1) row.splice(keyIdx, 1);
+            const tr = $("<tr>");
+            row.forEach(cell => tr.append(`<td>${cell}</td>`));
+            tbody.append(tr);
+          });
+
+          dataTable = $("#filtered-table").DataTable({
+            dom: '<"top"<"table-header"f>l<"table-controls"ip>>rt<"bottom"ip>',
+            language: {
+              search: "_INPUT_",
+              searchPlaceholder: "Search projects...",
+              lengthMenu: "Show _MENU_ projects",
+              info: "Showing _START_ to _END_ of _TOTAL_ projects",
+              infoEmpty: "No projects found",
+              infoFiltered: "(filtered from _MAX_ total projects)",
+              zeroRecords: "No matching projects found"
+            }
+          });
+
+          const getIndex = name => headers.indexOf(name);
+          populateDropdown("#filter-type", rawData, getIndex("Type"), "Type");
+          populateDropdown("#filter-field", rawData, getIndex("Field/Department"), "Field/Department");
+          populateDropdown("#filter-division", rawData, getIndex("IC/Division"), "IC/Division");
+          populateDropdown("#filter-sponsor", rawData, getIndex("Sponser"), "Sponser");
+
+          $("#filter-type, #filter-field, #filter-division, #filter-sponsor").on("change", function () {
+            dataTable.columns(getIndex("Type")).search($("#filter-type").val());
+            dataTable.columns(getIndex("Field/Department")).search($("#filter-field").val());
+            dataTable.columns(getIndex("IC/Division")).search($("#filter-division").val());
+            dataTable.columns(getIndex("Sponser")).search($("#filter-sponsor").val());
+            dataTable.draw();
+          });
+
+        } catch (err) {
+          console.error("Error processing CSV data:", err);
+          alert("Error loading data. See console for details.");
+        }
+      },
+      error: function (err) {
+        console.error("Error loading CSV:", err);
+        alert("Failed to load data file.");
+      }
+    });
+  </script>
+</body>
+</html>
